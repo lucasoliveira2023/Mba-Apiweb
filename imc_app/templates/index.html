@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de IMC</h1>
+        <form method="post">
+            <label for="peso">Peso (kg):</label>
+            <input type="text" id="peso" name="peso" required>
+            <label for="altura">Altura (m):</label>
+            <input type="text" id="altura" name="altura" required>
+            <button type="submit">Calcular IMC</button>
+        </form>
+
+        {% if imc is defined and classificacao is defined %}
+            <div class="result">
+                <p>Seu IMC é: {{ '%.2f' | format(imc) }}</p>
+                <p>Classificação: {{ classificacao }}</p>
+            </div>
+        {% elif error is defined %}
+            <div class="error">
+                <p>{{ error }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
