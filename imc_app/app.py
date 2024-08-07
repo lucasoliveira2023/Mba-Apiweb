@@ -19,7 +19,7 @@ def classificar_imc(imc):
     elif 35 <= imc <= 40:
         return 'obesidade grau 2'
     else:
-        'obesidade grau 3'
+        return 'obesidade grau 3'
         
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -31,7 +31,7 @@ def index():
             imc = calcular_imc(peso, altura)
             classificacao = classificar_imc(imc)
             
-            return render_template('index.htm', imc=imc, classificacao=classificacao)
+            return render_template('index.html', imc=imc, classificacao=classificacao)
         except ValueError:
             return render_template('index.html', error='por favor, insira valores validos para peso e altura')
         
