@@ -15,34 +15,32 @@ Clone o repositório do GitHub:
 ```bash
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
+```
 
-```bash
 
 - Crie um ambiente virtual
 
 ```bash
 - python -m venv imcvirtual
-```bash
+```
 
 - ATIVE O AMBIENTE VIRTUAL
 
 ```bash
 - imcvirtual\Scripts\activate
-```bash
+```
 
 - INSTALE AS DEPENDENCIAS
 
-```bash 
--  pip install -r requirements.txt
 ```bash
+-  pip install -r requirements.txt
+```
 
 - EXECUTE A APLICACAO
 
 ```bash
 - python app.py
-```bash
-
-
+```
 
 - EXEMPLO DE USO
 
