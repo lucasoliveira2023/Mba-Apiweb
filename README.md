@@ -18,7 +18,7 @@ cd nome-do-repositorio
 ```
 
 
-- Crie um ambiente virtual
+- CRIE UM AMBIENTE VIRTUAL
 
 ```bash
 - python -m venv imcvirtual
